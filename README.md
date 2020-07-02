@@ -21,7 +21,16 @@ The install script sets up a stream and a couple of views in the `"testinsert"` 
 To view the program arguments:
 
 ```
-    testinsert.sh -h
+ testinsert.sh --help
+
+ testinsert.sh [OPTIONS...] ARGUMENTS...
+ --help                          : print help message and quit (default: false)
+ -b (--batch-size) batchSize     : insert <rows> rows in each batch, for each thread (default: 100)
+ -c (--batch-count) batchCount   : insert a total of <bathch-count> batches (default: 1000)
+ -s (--stream-name) streamname   : name of the stream in which to insert (default: "testinsert"."insertstream")
+ -t (--thread-count) threadCount : launch <thread-count> threads
+ -w (--wait-time) waitTime       : wait an average of <wait-time> secs between batches - if 0 then don't wait
+
 ```
 
 Start a sqlline session in a second terminal:
