@@ -31,7 +31,7 @@ public class TestInserts
             metaVar = "batchSize",
             required = false)
 
-    private int batchSize = 100;
+    private int batchSize = 1000;
 
     @Option(
         name = "-c",
@@ -47,7 +47,7 @@ public class TestInserts
             aliases = {"--thread-count"},
             usage = "launch <thread-count> threads",
             metaVar = "threadCount",
-            required = true)
+            required = false)
 
     static private int threadCount = 2; 
 
@@ -56,7 +56,7 @@ public class TestInserts
             aliases = {"--wait-time"},
             usage = "wait an average of <wait-time> secs between batches - if 0 then don't wait",
             metaVar = "waitTime",
-            required = true)
+            required = false)
 
     static private long waitTime = 0; 
 
